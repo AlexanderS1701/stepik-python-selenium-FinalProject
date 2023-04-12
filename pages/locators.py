@@ -5,14 +5,19 @@ class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     BASKET_LINK = (By.XPATH, "//header/div/div/div[2]/span/a")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 class BasketPageLocators():
     EMPTY_BASKET_TEXT = (By.XPATH, "/html/body/div[2]/div/div[3]/div[2]/p")
     PRODUCTS_IN_BASKET = (By.CSS_SELECTOR, ".col-sm-4 h3 a")
 
 class LoginPageLocators():
-    LOGIN_FORM = (By.ID, "login_form")
-    REGISTER_FORM = (By.ID, "register_form")
+    EMAIL_FIELD = (By.XPATH, "/html/body/div[2]/div/div[2]/div[2]/div/div[2]/form/div[1]/div/input")
+    LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
+    PASSWORD_FIELD = (By.CSS_SELECTOR, "#id_registration-password1")
+    REGISTER_BUTTON = (By.CSS_SELECTOR, "[name='registration_submit']")
+    REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
+    RE_PASSWORD_FIELD = (By.CSS_SELECTOR, "#id_registration-password2")
 
 class ProductPageLocators():
     ADD_TO_CART_BTN = (By.CLASS_NAME, 'btn-add-to-basket')
