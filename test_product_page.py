@@ -96,5 +96,4 @@ class TestUserAddToBasketFromProductPage():
         page = ProductPage(browser, link)
         page.open()
         page.add_to_cart()
-        page.solve_quiz_and_get_code()
         page.should_be_message_about_product_added_to_basket()
