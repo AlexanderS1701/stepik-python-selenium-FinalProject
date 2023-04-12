@@ -14,6 +14,7 @@ class BasketPage(BasePage):
             return False
         return True
 
+
     def is_not_element_present_in_basket(self, how, what, timeout=4):
         try:
             WebDriverWait(self.browser, timeout).until(EC.presence_of_element_located((how, what)))
@@ -29,4 +30,4 @@ class BasketPage(BasePage):
 
     def should_be_empty_basket_text(self):
         assert self.is_element_present_in_basket(
-            *BasketPageLocators.EMPTY_BASKET_TEXT), "Text 'Your basket is empty' is not present"
+            *BasketPageLocators.EMPTY_BASKET_TEXT), "Text 'Your basket is empty' is not present"CART_TEXT), "Text 'Your  is empty' is not present"
